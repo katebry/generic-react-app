@@ -1,47 +1,25 @@
-import React from 'react';
+import React from "react";
+import styled from "styled-components";
 
 export interface ButtonProps {
-  /**
-   * Is this the principal call to action on the page?
-   */
-  primary?: boolean;
-  /**
-   * What background color to use
-   */
-  backgroundColor?: string;
-  /**
-   * How large should the button be?
-   */
-  size?: 'small' | 'medium' | 'large';
-  /**
-   * Button contents
-   */
-  label: string;
-  /**
-   * Optional click handler
-   */
-  onClick?: () => void;
+  text: string;
+  handleClick?: () => void;
 }
 
-/**
- * Primary UI component for user interaction
- */
-export const Button: React.FC<ButtonProps> = ({
-  primary = false,
-  size = 'medium',
-  backgroundColor,
-  label,
-  ...props
-}) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+const StyledButton = styled.button`
+  background-color: ${(props) => props.theme.colours["tertiary"]};
+  padding: ${(props) => props.theme.spacing["padding"]};
+  font-size: ${(props) => props.theme.font["xsmall"]};
+  border-radius: ${(props) => props.theme.general["border-radius"]};
+  border: none;
+  `;
+
+export const Button = ({ text, handleClick, ...props }: ButtonProps) => {
   return (
-    <button
-      type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
-      style={{ backgroundColor }}
-      {...props}
-    >
-      {label}
-    </button>
+    <>
+      <StyledButton onClick={handleClick} {...props}>
+        {text}
+      </StyledButton>
+    </>
   );
 };

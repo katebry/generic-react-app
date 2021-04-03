@@ -1,17 +1,24 @@
-import React from "react";
 import { Theme } from "./theme/Theme";
-import "./App.css";
+import { Button } from "./stories/Button";
+import styled from "styled-components";
+
+const AppWrapper = styled.div`
+  margin: ${(props) => props.theme.general["margin"]};
+`;
 
 function App() {
   return (
-    <div className="App">
+    <>
       <Theme>
+        <AppWrapper>
           <p>
             Edit <code>src/App.tsx</code> and save to reload.
           </p>
           <h4>Learn React</h4>
+          <Button text="Next" />
+        </AppWrapper>
       </Theme>
-    </div>
+    </>
   );
 }
 

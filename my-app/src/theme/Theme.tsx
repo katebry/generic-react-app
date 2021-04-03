@@ -13,7 +13,22 @@ const theme = {
         primaryDary: '#868784',
         secondaryDark: '#34113F',
     },
-    font: {}
+    font: {
+        xsmall: '14px',
+        small: '18px',
+        medium: '24px',
+        large: '32px',
+        xlarge: '48px',
+    },
+    spacing: {
+        padding: '10px',
+    },
+    general: {
+        'border-radius': '4px',
+        border: '1px solid #86784',
+        margin: '15px'
+    }
+
 }
 
 export const Theme = ({ children }: ThemeProps) => (
