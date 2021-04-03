@@ -7,6 +7,11 @@ const AppWrapper = styled.div`
 `;
 
 function App() {
+
+  const handleClick = () => {
+    console.log('you clicked me!')
+  }
+
   return (
     <>
       <Theme>
@@ -15,7 +20,7 @@ function App() {
             Edit <code>src/App.tsx</code> and save to reload.
           </p>
           <h4>Learn React</h4>
-          <Button text="Next" />
+          <Button text="Next" onClick={handleClick}/>
         </AppWrapper>
       </Theme>
     </>

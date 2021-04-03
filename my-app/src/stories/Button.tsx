@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export interface ButtonProps {
   text: string;
-  handleClick?: () => void;
+  onClick?: () => void;
 }
 
 const StyledButton = styled.button`
@@ -12,8 +12,10 @@ const StyledButton = styled.button`
   font-size: ${(props) => props.theme.font["xsmall"]};
   border-radius: ${(props) => props.theme.general["border-radius"]};
   border: none;
+  cursor: pointer;
   &:active {
     background-color: ${(props) => props.theme.colours["primary"]};
+    color: ${(props) => props.theme.colours["tertiary"]};
   }
   &:hover {
     background-color: ${(props) => props.theme.colours["primary"]};
@@ -25,10 +27,10 @@ const StyledButton = styled.button`
   }
 `;
 
-export const Button = ({ text, handleClick, ...props }: ButtonProps) => {
+export const Button = ({ text, onClick, ...props }: ButtonProps) => {
   return (
     <>
-      <StyledButton onClick={handleClick} {...props}>
+      <StyledButton onClick={onClick} {...props}>
         {text}
       </StyledButton>
     </>
