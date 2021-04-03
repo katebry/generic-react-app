@@ -25,7 +25,7 @@ export const theme = {
     },
     general: {
         'border-radius': '4px',
-        border: '1px solid #86784',
+        border: '1px solid #D4F2D2',
         margin: '15px'
     }
 
