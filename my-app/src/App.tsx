@@ -1,16 +1,17 @@
 import { Theme } from "./theme/Theme";
-import { Button } from "./stories/Button";
 import styled from "styled-components";
+import { Button } from "./stories/Button";
+import { Footer } from "./stories/Footer";
+import { IconType } from "./stories/IconMap";
 
 const AppWrapper = styled.div`
   margin: ${(props) => props.theme.general["margin"]};
 `;
 
 function App() {
-
   const handleClick = () => {
-    console.log('you clicked me!')
-  }
+    console.log("you clicked me!");
+  };
 
   return (
     <>
@@ -20,8 +21,9 @@ function App() {
             Edit <code>src/App.tsx</code> and save to reload.
           </p>
           <h4>Learn React</h4>
-          <Button text="Next" onClick={handleClick}/>
+          <Button text="Next" onClick={handleClick} />
         </AppWrapper>
+        <Footer mainText="Made by Kate" subText="in lockdown 3.0" iconRef={IconType.COPYRIGHT}/>
       </Theme>
     </>
   );
