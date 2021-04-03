@@ -12,6 +12,6 @@ const MappedIcon = (props: IconProps) => {
 
 export const Icon = styled(MappedIcon)`
   color: ${(props) => props.theme.colours["secondaryDark"]};
-  width: 1rem;
-  height: 1rem;
+  width: 2rem;
+  height: 2rem;
 `;
