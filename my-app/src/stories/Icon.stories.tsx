@@ -7,9 +7,10 @@ export default {
   component: Icon,
 } as Meta;
 
-const Template: Story<IconProps> = () => <Icon iconRef={IconType.TICK} />;
+const Template: Story<IconProps> = () => <Icon iconRef={IconType.CART} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  iconRef: IconType.TICK
+  iconRef: IconType.CART,
 };
+

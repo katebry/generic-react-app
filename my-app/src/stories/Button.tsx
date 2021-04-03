@@ -31,7 +31,7 @@ export const Button = ({ text, onClick, ...props }: ButtonProps) => {
   return (
     <>
       <StyledButton onClick={onClick} {...props} role="button">
-        {text}
+        {text.toUpperCase()}
       </StyledButton>
     </>
   );

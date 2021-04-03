@@ -5,6 +5,7 @@ import { Icon } from "./Icon";
 
 export interface CheckboxProps {
   isChecked: boolean;
+  label?: string;
 }
 
 const CheckboxContainer = styled.div`
