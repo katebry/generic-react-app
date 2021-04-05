@@ -45,13 +45,13 @@ const SubTextContainer = styled.div`
   margin-left: 2em;
 `;
 
-export const Footer = ({ mainText, subText }: FooterProps) => {
+export const Footer = ({ mainText, subText, iconRef }: FooterProps) => {
   return (
     <>
       <FooterContainer>
         <Divider></Divider>
         <IconContainer>
-          <Icon iconRef={IconType.REACT} />
+          <Icon iconRef={iconRef} />
           <MainTextContainer>{mainText}</MainTextContainer>
         </IconContainer>
         <SubTextContainer>{subText}</SubTextContainer>
