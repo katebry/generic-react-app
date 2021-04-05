@@ -1,5 +1,6 @@
 import { Story, Meta } from "@storybook/react";
 import { Footer, FooterProps } from "./Footer";
+import { IconType } from "./IconMap";
 
 export default {
   title: "Example/Footer",
@@ -11,5 +12,6 @@ const Template: Story<FooterProps> = (args) => <Footer {...args} />;
 export const Primary = Template.bind({});
 Primary.args = {
   mainText: 'A string with some stuff in',
-  subText: 'Some more string stuff'
+  subText: 'Some more string stuff',
+  iconRef: IconType.COPYRIGHT
 };
