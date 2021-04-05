@@ -7,6 +7,7 @@ import {
 } from "react-icons/ti";
 import { FaCashRegister } from "react-icons/fa";
 import { RiCopyrightFill } from "react-icons/ri";
+import { SiReact } from "react-icons/si";
 
 export enum IconType {
   TICK = "TiTick",
@@ -16,6 +17,7 @@ export enum IconType {
   CART = "TiShoppingCart",
   CHECKOUT = "FaCashRegister",
   COPYRIGHT = "RiCopyrightFill",
+  REACT = 'SiReact',
 }
 
 export const iconMap = {
@@ -26,4 +28,5 @@ export const iconMap = {
   TiShoppingCart: TiShoppingCart,
   FaCashRegister: FaCashRegister,
   RiCopyrightFill: RiCopyrightFill,
+  SiReact: SiReact,
 };

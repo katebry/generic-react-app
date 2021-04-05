@@ -12,7 +12,7 @@ export interface FooterProps {
 const FooterContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr repeat(4, 2fr) 1fr;
-  grid-template-rows: repeat(2, 1fr) 2.5fr 1fr;
+  grid-template-rows: repeat(2, 1fr) 2fr 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
 `;
@@ -23,13 +23,38 @@ const Divider = styled.div`
   width: 100%;
 `;
 
+const IconContainer = styled.div`
+  grid-area: 3 / 2 / 4 / 3;
+  margin-left: 1em;
+  margin-top: 1em;
+  display: flex;
+`;
+
+const MainTextContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1em;
+`;
+
+const SubTextContainer = styled.div`
+  grid-area: 3 / 3 / 4 / 6;
+  display: flex;
+  align-items: center;
+  margin-top: 1em;
+  margin-left: 2em;
+`;
+
 export const Footer = ({ mainText, subText }: FooterProps) => {
   return (
     <>
       <FooterContainer>
         <Divider></Divider>
-        {mainText}
-        {subText}
+        <IconContainer>
+          <Icon iconRef={IconType.REACT} />
+          <MainTextContainer>{mainText}</MainTextContainer>
+        </IconContainer>
+        <SubTextContainer>{subText}</SubTextContainer>
       </FooterContainer>
     </>
   );
