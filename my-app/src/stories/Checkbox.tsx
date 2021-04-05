@@ -9,8 +9,13 @@ export interface CheckboxProps {
 }
 
 const CheckboxContainer = styled.div`
-  display: inline-block;
+  display: flex;
   vertical-align: middle;
+`;
+
+const LabelContainer = styled.div`
+  margin-top: 7px;
+  margin-left: 5px;
 `;
 
 const StyledCheckbox = styled.div<CheckboxProps>`
@@ -18,7 +23,7 @@ const StyledCheckbox = styled.div<CheckboxProps>`
   width: 2em;
   height: 2em;
   background-color: ${(props) => props.theme.colours["primary"]};
-  border-radius: ${props => props.theme.general["border-radius"]};
+  border-radius: ${(props) => props.theme.general["border-radius"]};
   transition: all 100ms;
 `;
 
@@ -29,10 +34,11 @@ const StyledIcon = styled(Icon)`
   transform: translate(-50%, -50%);
 `;
 
-export const Checkbox = ({ isChecked }: CheckboxProps) => (
+export const Checkbox = ({ isChecked, label }: CheckboxProps) => (
   <CheckboxContainer>
     <StyledCheckbox isChecked={isChecked}>
       {isChecked ? <StyledIcon iconRef={IconType.TICK}></StyledIcon> : null}
     </StyledCheckbox>
+    <LabelContainer>{label}</LabelContainer>
   </CheckboxContainer>
 );

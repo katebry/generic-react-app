@@ -11,4 +11,5 @@ const Template: Story<CheckboxProps> = (args) => <Checkbox {...args} />;
 export const Primary = Template.bind({});
 Primary.args = {
   isChecked: true,
+  label: 'Agree to Terms and Conditions'
 };
