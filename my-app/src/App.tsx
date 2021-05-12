@@ -43,6 +43,9 @@ function App() {
             {/* @ts-ignore */}
             {(formContext) => (
               <form onSubmit={formContext.handleSubmit}>
+                {!formContext.isValid && formContext.submitCount > 0 ? (
+                  <h2>error</h2>
+                ): null}
                 <input
                   name="test"
                   id="test"
