@@ -1,6 +1,5 @@
 import { Story, Meta } from "@storybook/react";
 import { ResponsiveImage, ResponsiveImageProps } from "./ResponsiveImage";
-import { IconType } from "./IconMap";
 
 export default {
   title: "Example/ResponsiveImage",
