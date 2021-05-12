@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Theme } from "./theme/Theme";
 import styled from "styled-components";
 import { Button } from "./stories/Button";
-import { Dropdown } from "./stories/Dropdown";
 import { Footer } from "./stories/Footer";
 import { IconType } from "./stories/IconMap";
 
@@ -32,7 +31,6 @@ function App() {
           </p>
           <h4>Learn React</h4>
           <Button text="Next" onClick={handleClick} />
-          <Dropdown onClick={toggleDd} showDropdown={showMenu}/>
         </AppWrapper>
         <Footer
           mainText="Made by Kate"
