@@ -9,7 +9,6 @@ export function Form({
   validateOnChange,
 }: FormikValues) {
   // eslint-disable-next-line
-
   const formik = useFormik<any>({
     validateOnBlur: validateOnBlur,
     validateOnChange: validateOnChange,
