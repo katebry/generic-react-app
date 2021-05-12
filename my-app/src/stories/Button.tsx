@@ -4,6 +4,7 @@ import styled from "styled-components";
 export interface ButtonProps {
   text: string;
   onClick?: () => void;
+  type?: string
 }
 
 const StyledButton = styled.button`
@@ -27,7 +28,7 @@ const StyledButton = styled.button`
   }
 `;
 
-export const Button = ({ text, onClick, ...props }: ButtonProps) => {
+export const Button = ({ text, onClick, type, ...props }: ButtonProps) => {
   return (
     <>
       <StyledButton onClick={onClick} {...props} role="button">
